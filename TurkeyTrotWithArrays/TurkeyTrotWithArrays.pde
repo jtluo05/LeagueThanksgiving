@@ -3,28 +3,32 @@ PImage farmyard;
 boolean gameOver = false;
 
  // Declare and initialize a variable (numberOfTurkeys) to store how many turkeys are in the race (2-8)
- 
+ int numberOfTurkeys=3;
  // Declare an array (turkeys) that is big enough to hold all the turkeys 
- 
+ int [] not= new int[3];
 
 void setup() {
   // This sets the size of the text used for the lane labels.
   textSize(20);
   
  // Set the size of the race course (make the width bigger for a longer race).
- 
+ size(350,400);
  
  // Load a picture into the farmyard to be used as the race background (grass.jpg has been provided for you),
- 
+ farmyard=loadImage("grass.jpg");
 
  // Resize the farmyard so it will fill the sketch
- 
+farmyard.resize(width,height);
+background(farmyard);
  
 
  // Create the turkeys and put them in the array. 
  // Example:     turkeys[0] = new Turkey(0, y-value);
  // NOTE: Each turkey will need a unique y value to place it in a different racing lane
- 
+ Turkey[] t;
+ t[0] = new Turkey(0,20);
+ t[1] = new Turkey(0, 150);
+ t[2] = new Turkey(0, 280);
 
 }
 
